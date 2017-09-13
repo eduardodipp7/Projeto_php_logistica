@@ -86,7 +86,10 @@
     </section>
 
     <footer class="footer">
-        <?php #Rodapé ?>
+        <?php
+        #Rodapé
+        include("template/rodape.php");
+         ?>
     </footer>
 
 </body>
