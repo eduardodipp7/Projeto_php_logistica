@@ -9,7 +9,10 @@
 </head>
 <body>
     <header class="header">
-       <?php #topo ?>
+       <?php
+         #topo
+         require('template/topo.php');
+         ?>
     </header>
 
 
@@ -46,7 +49,10 @@
     </section>
 
     <footer class="footer">
-       <?php #rodape ?>
+       <?php
+          #rodape
+          require('template/rodape.php');
+           ?>
     </footer>
 
 </body>
