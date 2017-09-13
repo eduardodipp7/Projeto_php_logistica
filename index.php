@@ -70,7 +70,7 @@
     <section class="vantagens">
         <?php
         #Vantagens
-        require("template/vantagens.php");
+        include("template/vantagens.php");
         ?>
     </section>
 
