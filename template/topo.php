@@ -29,7 +29,12 @@
                    $paginas[] = array('url' => 'cadastro.php', 'label' => 'Cadastre-se');
                    $paginas[] = array('url' => 'contato.php', 'label' => 'Contato');
                ?>
-	           <?php echo 'Exercícios'; ?>
+	           <?php
+              foreach($paginas as $pagina): ?>
+                 <li><a href="<?php echo $pagina['url']; ?>"><?php echo $pagina['label']; ?></a></li>
+            <?php endforeach;
+            ?>
+
 		</ul>
 	</nav>
 </div>
