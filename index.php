@@ -1,7 +1,7 @@
     <header class="header">
            <?php
            #Topo
-           include("template/topo.php");
+           require("template/topo.php");
             ?>
     </header>
     <?php
@@ -68,11 +68,17 @@
     </section>
 
     <section class="vantagens">
-        <?php #Vantagens ?>
+        <?php
+        #Vantagens
+        require("template/vantagens.php");
+        ?>
     </section>
 
     <section class="funcionalidades">
-        <?php #Funcionalidades ?>
+        <?php
+        #Funcionalidades
+        require("template/funcionalidades.php");
+        ?>
     </section>
 
     <section class="cadastro">
@@ -88,7 +94,7 @@
     <footer class="footer">
         <?php
         #Rodapé
-        include("template/rodape.php");
+        require("template/rodape.php");
          ?>
     </footer>
 
