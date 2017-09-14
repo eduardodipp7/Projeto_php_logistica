@@ -43,18 +43,22 @@
           <!-- Wrapper for slides -->
 
           <div class="carousel-inner">
-            <?php #Banner --- Inicio Laço ?>
-                <div class="item" style="background-image:url('<?php #Url Banner ?>')">
+            <?php #Banner --- Inicio Laço
+            foreach($banners as $banner):
+            ?>
+                <div class="item <?php echo ($banner['id']==1)? 'active': ''?>" style="background-image:url('<?php echo $banner['url'] ?>')">
                   <div class="container">
                     <div class="row">
                         <div class="span12">
-                            <h2><?php #Nome do Banner ?></h2>
-                            <p><?php #Descriçao ?></p>
+                            <h2><?php echo $banner['nome']?></h2>
+                            <p><?php echo $banner['descricao'] ?></p>
                         </div>
                     </div>
                   </div>
                </div>
-           <?php #Banner ---- Fim Laço?>
+           <?php #Banner ---- Fim Laço
+             endforeach;
+           ?>
          </div>
 
           <!-- Controls -->
