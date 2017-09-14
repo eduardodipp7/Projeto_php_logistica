@@ -28,11 +28,16 @@
                    $paginas[] = array('url' => 'servicos.php', 'label' => 'Serviços');
                    $paginas[] = array('url' => 'cadastro.php', 'label' => 'Cadastre-se');
                    $paginas[] = array('url' => 'contato.php', 'label' => 'Contato');
+
+                   foreach($paginas as $pagina){
+                     echo "<li><a href='{$pagina['url']}'> {$pagina['label']}</a></li>";
+                   }
                ?>
 	           <?php
+             /*
               foreach($paginas as $pagina): ?>
                  <li><a href="<?php echo $pagina['url']; ?>"><?php echo $pagina['label']; ?></a></li>
-            <?php endforeach;
+            <?php endforeach;*/
             ?>
 
 		</ul>
