@@ -1,12 +1,6 @@
 
 <?php
- function varificarPagina($link){
-   if($link['url'] == basename($_SERVER['PHP_SELF'])){
-     return true;
-   }else{
-     return false;
-   }
- }
+ require('include/utils.php');
 ?>
 <!doctype html>
 <html dir="ltr" lang="pt-BR">
