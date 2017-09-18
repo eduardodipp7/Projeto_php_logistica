@@ -7,3 +7,17 @@ function varificarPagina($link){
 		return false;
 	}
 }
+
+function validar($post){
+	$erros = array();
+	foreach($post as $campo => $valor){
+		if(!$valor){
+			$erros[] = $campo;
+		}
+	}
+	if($erros){
+		return $erros;
+	}else{
+		return null;
+	}
+}

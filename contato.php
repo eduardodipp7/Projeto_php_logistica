@@ -26,22 +26,50 @@
 
             <iframe class="map" width="940" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=4Linux+-+Rua+Vergueiro,+Vila+Mariana,+S%C3%A3o+Paulo&amp;aq=0&amp;oq=4linux+rua&amp;sll=-23.65333,-46.595764&amp;sspn=0.906957,1.454315&amp;ie=UTF8&amp;hq=4Linux+-&amp;hnear=Rua+Vergueiro,+S%C3%A3o+Paulo&amp;t=m&amp;ll=-23.587469,-46.633487&amp;spn=0.013765,0.04034&amp;z=15&amp;output=embed"></iframe>
 
-            <form action="#" method="post" class="form">
+
+            <?php
+         		if($_POST){
+         			foreach($_POST as $campo){
+         				if(empty($campo)){
+         					$check = FALSE;
+         				}else{
+         					$check = TRUE;
+         				}
+         			}
+         			if($check){
+         				echo "<div class = 'alert alert - sucess'>
+         				     <button type= 'button' class='close' data - dismiss = 'alert' aria - hidden = 'true'>
+         						 & times;
+         						 </button>
+         						 Formulario enviado com sucesso!
+         						 </div>";
+         			}else{
+         				echo "<div class = 'alert alert - danger alert - dismissable'>
+         						 <button type= 'button' class='close' data - dismiss = 'alert' aria - hidden = 'true'>
+         						 & times;
+         						 </button>
+         						 Erro: Todos os campos devem ser preenchidos
+         						 </div>";
+         			}
+         		}
+         		 ?>
+
+            <form action="" method="post" class="form">
                 <p>
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" >
                 </p>
                 <p>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+                    <input type="email" name="email" id="email" placeholder="seu@email.com" >
                 </p>
                 <p>
                     <label for="tel">Telefone</label>
-                    <input type="tel" name="tel" id="tel" pattern="[0-9]{8}" placeholder="(xx) 1234-5678" required>
+                    <input type="tel" name="tel" id="tel" pattern="[0-9]{8}" placeholder="(xx) 1234-5678" >
                 </p>
                 <p>
                     <label for="msg">Mensagem</label>
-                    <textarea name="msg" id="msg" rows="5" placeholder="Sua mensagem..." required></textarea>
+                    <textarea name="msg" id="msg" rows="5" placeholder="Sua mensagem..." ></textarea>
                 </p>
                 <p>
                     <button class="btn">Enviar</button>
