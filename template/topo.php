@@ -1,4 +1,13 @@
 
+<?php
+ function varificarPagina($link){
+   if($link['url'] == basename($_SERVER['PHP_SELF'])){
+     return true;
+   }else{
+     return false;
+   }
+ }
+?>
 <!doctype html>
 <html dir="ltr" lang="pt-BR">
 <head>
@@ -29,16 +38,22 @@
                    $paginas[] = array('url' => 'cadastro.php', 'label' => 'Cadastre-se');
                    $paginas[] = array('url' => 'contato.php', 'label' => 'Contato');
 
-                   foreach($paginas as $pagina){
+                /*   foreach($paginas as $pagina){
                      echo "<li><a href='{$pagina['url']}'> {$pagina['label']}</a></li>";
                    }
-               ?>
-	           <?php
-             /*
-              foreach($paginas as $pagina): ?>
-                 <li><a href="<?php echo $pagina['url']; ?>"><?php echo $pagina['label']; ?></a></li>
-            <?php endforeach;*/
-            ?>
+*/    ?>
+                  <?php foreach($paginas as $pagina): ?>
+                   <li class=<?php echo (basename($_SERVER['PHP_SELF']) == $pagina['url']) ? 'active' : ''; ?>><a href="<?php echo $pagina['url']; ?>"><?php echo $pagina['label']; ?></a>
+                  <?php endforeach; ?>
+
+                  <?php
+              /*
+                   foreach($paginas as $pagina): ?>
+                      <li><a href="<?php echo $pagina['url']; ?>"><?php echo $pagina['label']; ?></a></li>
+                 <?php endforeach;
+*/
+                 ?>
+
 
 		</ul>
 	</nav>
