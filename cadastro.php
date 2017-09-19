@@ -56,36 +56,36 @@
 
 		<form action="" method="post" class="form">
 			<p>
-				<label for="nome">Nome/Razao</label> <input type="text" name="nome"
+				<label for="nome">Nome/Razao</label> <input type="text" name="nome" value="<?php echo $_POST['nome']?>"
 					id="nome_razao" >
 			</p>
 			<p>
 				<label for="email">Email</label> <input type="email" name="email"
-					id="email" >
+					id="email" value="<?php echo $_POST['email']?>" >
 			</p>
 			<p>
 				<label for="tel">Telefone</label> <input type="tel" name="telefone"
-					id="telefone" >
+					id="telefone" value="<?php echo $_POST['telefone']?>">
 			</p>
 			<p>
 				<label for="cel">Celular</label> <input type="tel" name="celular"
-					id="celular" >
+					id="celular"  value="<?php echo $_POST['celular']?>">
 			</p>
 			<p>
-				<label for="cep">Cep</label> <input type="tel" name="cep" id="tel"
-					 >
+				<label for="cep">Cep</label> <input type="tel" name="cep" id="cep"
+					 value="<?php echo $_POST['cep']?>">
 			</p>
 			<p>
 				<label for="endereco">Endereço</label> <input type="tel"
-					name="telefone" id="bai" >
+					name="end" id="end" value="<?php echo $_POST['end']?>" >
 			</p>
 			<p>
 				<label for="bairro">Bairro</label> <input type="tel" name="bairro"
-					id="tel" >
+					id="bairro" value="<?php echo $_POST['bairro']?>" >
 			</p>
 			<p>
 				<label for="cidade">Cidade</label> <input type="tel" name="cidade"
-					id="cidade" >
+					id="cidade" value="<?php echo $_POST['cidade']?>">
 			</p>
 			<p>
 				<label for="Estado">Estado</label>

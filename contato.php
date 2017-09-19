@@ -57,19 +57,19 @@
             <form action="" method="post" class="form">
                 <p>
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome" >
+                    <input type="text" name="nome" id="nome" placeholder="Nome" value="<?php echo $_POST['nome']?>">
                 </p>
                 <p>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="seu@email.com" >
+                    <input type="email" name="email" id="email" placeholder="seu@email.com" value="<?php echo $_POST['email']?>" >
                 </p>
                 <p>
                     <label for="tel">Telefone</label>
-                    <input type="tel" name="tel" id="tel" pattern="[0-9]{8}" placeholder="(xx) 1234-5678" >
+                    <input type="tel" name="tel" id="tel" pattern="[0-9]{8}" placeholder="(xx) 1234-5678" value="<?php echo $_POST['tel']?>" >
                 </p>
                 <p>
                     <label for="msg">Mensagem</label>
-                    <textarea name="msg" id="msg" rows="5" placeholder="Sua mensagem..." ></textarea>
+                    <textarea name="msg" id="msg" rows="5" placeholder="Sua mensagem..." value="<?php echo $_POST['msg']?>" ></textarea>
                 </p>
                 <p>
                     <button class="btn">Enviar</button>
