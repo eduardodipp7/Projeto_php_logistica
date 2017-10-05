@@ -4,7 +4,7 @@ function conectar()
 {
   return pg_connect('host=localhost dbname=dexter user=postgres password=postgres');
 }
-conectar();
+
 function inserir($tabela, $dados)
 {
   //insert into tabela (campo1, campo2, campo3...) values (valor1, valor2, valor3, valor4...)
@@ -15,7 +15,7 @@ function inserir($tabela, $dados)
   }
   $campos = implode(",", $campos); //Converte o array em string separando por virgula
   $valores = implode(",", $valores);//Converte o array em string separando por virgula
-  $sql = "insert into $tabela ($campos) values ($valores)";
+  $sql = "insert into $tabela ( $campos ) values ( $valores )";
   return pg_query($sql);//Insere registro no banco
 }
 

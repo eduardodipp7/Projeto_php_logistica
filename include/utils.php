@@ -1,5 +1,6 @@
 <?php
-
+require_once('banco.php');
+conectar();
 function varificarPagina($link){
 	if($link['url'] == basename($_SERVER['PHP_SELF'])){
 		return true;
@@ -8,9 +9,9 @@ function varificarPagina($link){
 	}
 }
 
-function validar($post){
+function validar( $post ){
 	$erros = array();
-	foreach($post as $campo => $valor){
+	foreach( $post as $campo => $valor ){
 		if(!$valor){
 			$erros[] = $campo;
 		}

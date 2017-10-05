@@ -37,6 +37,7 @@
 				}
 			}
 			if($check){
+				inserir('clientes', $_POST);
 				echo "<div class = 'alert alert - sucess'>
 				     <button type= 'button' class='close' data - dismiss = 'alert' aria - hidden = 'true'>
 						 & times;
@@ -57,35 +58,35 @@
 		<form action="" method="post" class="form">
 			<p>
 				<label for="nome">Nome/Razao</label> <input type="text" name="nome" value="<?php echo $_POST['nome']?>"
-					id="nome_razao" >
+					id="nome_razao" placeholder="Nome" >
 			</p>
 			<p>
 				<label for="email">Email</label> <input type="email" name="email"
-					id="email" value="<?php echo $_POST['email']?>" >
+					id="email" placeholder="seu@email.com" value="<?php echo $_POST['email']?>" >
 			</p>
 			<p>
 				<label for="tel">Telefone</label> <input type="tel" name="telefone"
-					id="telefone" value="<?php echo $_POST['telefone']?>">
+					id="telefone"   placeholder="(xx) 1234-5678" value="<?php echo $_POST['telefone']?>">
 			</p>
 			<p>
 				<label for="cel">Celular</label> <input type="tel" name="celular"
-					id="celular"  value="<?php echo $_POST['celular']?>">
+					id="celular"  placeholder="(xx) 9999-9999"  value="<?php echo $_POST['celular']?>">
 			</p>
 			<p>
-				<label for="cep">Cep</label> <input type="tel" name="cep" id="cep"
+				<label for="cep">Cep</label> <input type="tel" name="cep" id="cep" placeholder="xxxxx-xxx"
 					 value="<?php echo $_POST['cep']?>">
 			</p>
 			<p>
 				<label for="endereco">Endereço</label> <input type="tel"
-					name="end" id="end" value="<?php echo $_POST['end']?>" >
+					name="end" id="end" placeholder="seu endereco" value="<?php echo $_POST['end']?>" >
 			</p>
 			<p>
 				<label for="bairro">Bairro</label> <input type="tel" name="bairro"
-					id="bairro" value="<?php echo $_POST['bairro']?>" >
+					id="bairro" placeholder="bairro" value="<?php echo $_POST['bairro']?>" >
 			</p>
 			<p>
 				<label for="cidade">Cidade</label> <input type="tel" name="cidade"
-					id="cidade" value="<?php echo $_POST['cidade']?>">
+					id="cidade" placeholder="cidade" value="<?php echo $_POST['cidade']?>">
 			</p>
 			<p>
 				<label for="Estado">Estado</label>

@@ -37,12 +37,14 @@
          				}
          			}
          			if($check){
+                inserir('fale_conosco', $_POST);
          				echo "<div class = 'alert alert - sucess'>
          				     <button type= 'button' class='close' data - dismiss = 'alert' aria - hidden = 'true'>
          						 & times;
          						 </button>
          						 Formulario enviado com sucesso!
          						 </div>";
+                     unset($_POST);
          			}else{
          				echo "<div class = 'alert alert - danger alert - dismissable'>
          						 <button type= 'button' class='close' data - dismiss = 'alert' aria - hidden = 'true'>
@@ -65,7 +67,7 @@
                 </p>
                 <p>
                     <label for="tel">Telefone</label>
-                    <input type="tel" name="tel" id="tel" pattern="[0-9]{8}" placeholder="(xx) 1234-5678" value="<?php echo $_POST['tel']?>" >
+                    <input type="tel" name="tel" id="tel" placeholder="(xx) 1234-5678" value="<?php echo $_POST['tel']?>" >
                 </p>
                 <p>
                     <label for="msg">Mensagem</label>
