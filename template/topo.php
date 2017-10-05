@@ -21,6 +21,10 @@
         <![endif]-->
 </head>
 <body>
+  <?php
+  include('../include/utils.php');
+  include('../include/user.php');
+  ?>
 <div class="container">
 	<a href="index.php" class="logo left">Dexter Courier</a>
 	<nav class="right">

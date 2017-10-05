@@ -1,5 +1,8 @@
     <header class="header">
-           <?php #'topo.php' ?>
+           <?php
+           #'topo.php'
+           require('topo.php');
+            ?>
     </header>
     <div class="container">
     <div class="row">

@@ -3,6 +3,11 @@
 
                     #TOPO
                     #Eta pagina index deve exibir a lista de funcionalidades
+                    require('topo.php');
+                    if (! verificarLogin()) {
+                   header('location:login.php');
+      }
+
             ?>
     </header>
     <div class="container">
